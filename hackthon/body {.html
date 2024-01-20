@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .space-card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Co-Working Spaces</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Co-Working Spaces</h1>
+        <nav>
+            <ul>
+                <li><a href="#featuredSpaces">Featured Spaces</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for spaces..." id="searchInput">
+            <button type="button" onclick="searchSpaces()">Search</button>
+        </div>
+    </header>
+
+    <section id="featuredSpaces">
+        <h2>Featured Co-Working Spaces</h2>
+        <div class="space-card">
+            <img src="space1.jpg" alt="Space 1">
+            <h3>Space 1 Name</h3>
+            <p>Located in City, Amenities: Wi-Fi, Coffee, Meeting Rooms</p>
+            <button type="button" onclick="bookSpace()">Book Now</button>
+        </div>
+        <!-- Repeat similar cards for other featured spaces -->
+    </section>
+
+    <section id="testimonials">
+        <h2>User Testimonials</h2>
+        <div class="testimonial">
+            <p>"I love working in these spaces. Great atmosphere and amenities!"</p>
+            <cite>- John Doe</cite>
+        </div>
+        <!-- Repeat similar testimonials -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Co-Working Spaces. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchSpaces() {
+            var searchInput = document.getElementById("searchInput").value;
+            // Implement your search logic here (e.g., filter spaces based on the search input)
+            console.log("Searching for spaces: " + searchInput);
+        }
+
+        function bookSpace() {
+            // Implement your booking logic here
+            console.log("Booking the selected space");
+        }
+    </script>
+</body>
+</html>

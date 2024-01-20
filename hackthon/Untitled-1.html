@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .space-card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Co-Working Spaces</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Co-Working Spaces</h1>
+        <nav>
+            <ul>
+                <li><a href="#featuredSpaces">Featured Spaces</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for spaces..." id="searchInput">
+            <button type="button" onclick="searchSpaces()">Search</button>
+        </div>
+    </header>
+
+    <section id="featuredSpaces">
+        <h2>Featured Co-Working Spaces</h2>
+
+        <!-- Space 1 -->
+        <div class="space-card">
+            <img src="C:\Users\Prajith\OneDrive\Desktop\hackthon\shridhar-gupta-dZxQn4VEv2M-unsplash.jpg" alt="Description of the image" width="500" height="400">
+            <h3>Space 1 CollaboraHub</h3>
+            <p>Located in Vijayawada, AshokNagar: Wi-Fi, Coffee, Meeting Rooms</p>
+            <button type="button" onclick="promptBooking()">Book Now</button>
+        </div>
+
+        <!-- Space 2 -->
+        <div class="space-card">
+            <img src="C:\Users\Prajith\OneDrive\Desktop\hackthon\WhatsApp Image 2024-01-20 at 12.14.46_dce8896c.jpg" alt="Description of the image" width="300" height="200">
+            <h3>Space 2 UrbanFlex Workspace</h3>
+            <p>Located in Vijayawada, AutoNagar: High-Speed Internet, Lounge Area</p>
+            <button type="button" onclick="promptBooking()">Book Now</button>
+        </div>
+
+        <!-- Space 3 -->
+        <div class="space-card">
+            <img src=""C:\Users\Prajith\OneDrive\Desktop\hackthon\WhatsApp Image 2024-01-20 at 12.14.46_dce8896c.jpg"" alt="Description of the image" width="300" height="200">
+            <h3>Space 3 InspireCo Connect</h3>
+            <p>Located in Vijayawada, Santhi Nagar: Quiet Workspace, Printers</p>
+            <button type="button" onclick="promptBooking()">Book Now</button>
+        </div>
+
+        <!-- Add more space cards as needed -->
+    </section>
+
+    <section id="testimonials">
+        <h2>User Testimonials</h2>
+        <div class="testimonial">
+            <p>"I love working in these spaces. Great atmosphere and amenities!"</p>
+            <cite>- Team-10</cite>
+        </div>
+        <!-- Repeat similar testimonials -->
+    </section>
+    <script>
+        function searchSpaces() {
+            var searchInput = document.getElementById("searchInput").value;
+            // Implement your search logic here (e.g., filter spaces based on the search input)
+            console.log("Searching for spaces: " + searchInput);
+        }
+
+        function promptBooking() {
+            var name = prompt("Enter your name:");
+            var phoneNumber = prompt("Enter your phone number:");
+            
+            if (name && phoneNumber) {
+                var confirmation = confirm("Confirm booking for " + name + " with phone number " + phoneNumber + "?");
+                
+                if (confirmation) {
+                    alert("Your workspace is booked!");
+                } else {
+                    alert("Booking canceled.");
+                }
+            } else {
+                alert("Name and phone number are required for booking.");
+            }
+        }
+    </script>
+</body>
+</html>
